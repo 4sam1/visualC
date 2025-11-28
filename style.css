@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: "Yu Gothic", sans-serif;
+    background: #faf7f4;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #4a1f2f;  /* ワイン系カラー */
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.catch {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* ===== NAV ===== */
+nav {
+    background: #6b2e44;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #8a3d57;
+}
+
+/* ===== SECTIONS ===== */
+section, article {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    border-left: 4px solid #8a3d57;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+/* ギャラリー */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+/* ASIDE */
+aside {
+    background: #eee;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    border-left: 4px solid #8a3d57;
+}
+
+/* FOOTER */
+footer {
+    background: #4a1f2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
