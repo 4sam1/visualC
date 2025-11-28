@@ -15,7 +15,7 @@ body {
 header {
     background: #A6373F;
     color: #fff;
-    padding: 28px 16px;  /* 少しコンパクトに */
+    padding: 28px 16px;
     text-align: center;
 }
 
@@ -62,7 +62,7 @@ nav a:hover {
 /* セクション共通レイアウト */
 section,
 article {
-    padding: 22px 16px;          /* 上下の余白を少し減らす */
+    padding: 22px 16px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -71,18 +71,18 @@ h2 {
     border-left: 4px solid #A6373F;
     padding-left: 10px;
     font-size: 1.5rem;
-    margin: 0 0 6px;             /* 下の余白も少しだけ */
+    margin: 0 0 6px;
 }
 
 h3 {
     color: #A6373F;
-    margin: 16px 0 4px;          /* タイトル下の余白を短く */
+    margin: 16px 0 4px;
     font-size: 1.15rem;
 }
 
 p {
     font-size: 1rem;
-    margin: 0 0 6px;             /* 段落間の余白を詰める */
+    margin: 0 0 6px;
 }
 
 li {
@@ -90,64 +90,32 @@ li {
     margin-bottom: 2px;
 }
 
-/* 単体の大きい画像 */
-.full-image {
+/* 主役画像（セクションごとに1枚） */
+.main-img {
     display: block;
-    max-width: 80%;
-    max-height: 260px;
-    margin: 10px auto 0;         /* 上の余白を少し縮める */
-    border-radius: 10px;
+    max-width: 90%;
+    max-height: 280px;
+    margin: 10px auto 0;
+    border-radius: 12px;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* 汎用 img */
+/* 汎用 img（ギャラリーなど） */
 img {
     max-width: 100%;
     border-radius: 8px;
     display: block;
 }
 
-/* ▼ こだわり・ABOUT の複数画像レイアウト */
-.multi-img {
-    display: grid;
-    gap: 6px;                    /* 画像同士の間を狭くする（前:8px） */
-    margin-top: 8px;             /* 文章との間も少しだけ */
-}
-
-/* 1枚 */
-.multi-img--1 {
-    grid-template-columns: minmax(0, 1fr);
-}
-.multi-img--1 img {
-    max-height: 260px;
-    object-fit: cover;
-}
-
-/* 2枚 */
-.multi-img--2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.multi-img--2 img {
-    max-height: 230px;           /* 少しだけ大きめに */
-    object-fit: cover;
-}
-
-/* 3枚 */
-.multi-img--3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-.multi-img--3 img {
-    max-height: 210px;           /* 高さを少しだけ上げて隙間感を減らす */
-    object-fit: cover;
-}
-
-/* ▼ ギャラリー */
+/* ギャラリー：サブ画像たち */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 8px;                    /* ギャラリーの画像間も少し狭く */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
     margin-top: 10px;
 }
+
 .gallery-grid img {
     max-height: 180px;
     object-fit: cover;
@@ -202,20 +170,15 @@ footer {
         padding: 18px 12px;
     }
 
-    .multi-img--2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .multi-img--3 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .multi-img--3 img {
-        max-height: 180px;
+    .main-img {
+        max-width: 100%;
+        max-height: 240px;
     }
 
     .gallery-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+
 
