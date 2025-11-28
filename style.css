@@ -15,7 +15,7 @@ body {
 header {
     background: #A6373F;
     color: #fff;
-    padding: 32px 16px;
+    padding: 28px 16px;  /* 少しコンパクトに */
     text-align: center;
 }
 
@@ -25,7 +25,7 @@ header {
 }
 
 .catch {
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 1rem;
 }
 
@@ -48,7 +48,7 @@ nav li {
 
 nav a {
     display: block;
-    padding: 10px;
+    padding: 8px 10px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -62,7 +62,7 @@ nav a:hover {
 /* セクション共通レイアウト */
 section,
 article {
-    padding: 28px 16px;
+    padding: 22px 16px;          /* 上下の余白を少し減らす */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -71,19 +71,23 @@ h2 {
     border-left: 4px solid #A6373F;
     padding-left: 10px;
     font-size: 1.5rem;
-    margin-bottom: 8px;
+    margin: 0 0 6px;             /* 下の余白も少しだけ */
 }
 
 h3 {
     color: #A6373F;
-    margin-top: 20px;
-    margin-bottom: 6px;
+    margin: 16px 0 4px;          /* タイトル下の余白を短く */
     font-size: 1.15rem;
 }
 
-p,
+p {
+    font-size: 1rem;
+    margin: 0 0 6px;             /* 段落間の余白を詰める */
+}
+
 li {
     font-size: 1rem;
+    margin-bottom: 2px;
 }
 
 /* 単体の大きい画像 */
@@ -91,7 +95,7 @@ li {
     display: block;
     max-width: 80%;
     max-height: 260px;
-    margin: 14px auto 0;
+    margin: 10px auto 0;         /* 上の余白を少し縮める */
     border-radius: 10px;
     object-fit: cover;
 }
@@ -106,8 +110,8 @@ img {
 /* ▼ こだわり・ABOUT の複数画像レイアウト */
 .multi-img {
     display: grid;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 6px;                    /* 画像同士の間を狭くする（前:8px） */
+    margin-top: 8px;             /* 文章との間も少しだけ */
 }
 
 /* 1枚 */
@@ -124,7 +128,7 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .multi-img--2 img {
-    max-height: 220px;
+    max-height: 230px;           /* 少しだけ大きめに */
     object-fit: cover;
 }
 
@@ -133,7 +137,7 @@ img {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .multi-img--3 img {
-    max-height: 200px;
+    max-height: 210px;           /* 高さを少しだけ上げて隙間感を減らす */
     object-fit: cover;
 }
 
@@ -141,8 +145,8 @@ img {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
-    margin-top: 14px;
+    gap: 8px;                    /* ギャラリーの画像間も少し狭く */
+    margin-top: 10px;
 }
 .gallery-grid img {
     max-height: 180px;
@@ -152,9 +156,9 @@ img {
 /* ASIDE */
 aside {
     background: #EFE7D6;
-    padding: 20px 16px;
+    padding: 18px 16px;
     max-width: 900px;
-    margin: 24px auto;
+    margin: 20px auto;
     border-left: 4px solid #3F6B4C;
 }
 
@@ -162,6 +166,7 @@ aside h2 {
     border: none;
     padding-left: 0;
     font-size: 1.2rem;
+    margin: 0 0 6px;
 }
 
 /* FOOTER */
@@ -169,9 +174,9 @@ footer {
     background: #A6373F;
     color: #fff;
     text-align: center;
-    padding: 16px;
+    padding: 14px;
     font-size: 0.85rem;
-    margin-top: 24px;
+    margin-top: 18px;
 }
 
 /* ==========================
@@ -180,7 +185,7 @@ footer {
 @media (max-width: 768px) {
 
     header {
-        padding: 24px 12px;
+        padding: 22px 12px;
     }
 
     .logo {
@@ -189,12 +194,12 @@ footer {
 
     nav a {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: 6px 8px;
     }
 
     section,
     article {
-        padding: 22px 12px;
+        padding: 18px 12px;
     }
 
     .multi-img--2 {
@@ -213,3 +218,4 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
